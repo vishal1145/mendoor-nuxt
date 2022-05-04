@@ -1,0 +1,137 @@
+.topbar-wrap {
+    font-family: Montserrat;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.topbar-wrap,
+.topbar-menu-inner .sub-menu {
+    /* background-color: lightgray; */
+}
+
+.topbar-wrap {
+    position: relative;
+    z-index: 9801;
+    display: block;
+    /* background-color: #282828; */
+    color: #000;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 34px;
+}
+
+.ruby-container {
+    position: static;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    max-width: 1140px;
+}
+
+.container-inner {
+    display: block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.topbar-left {
+    float: left;
+}
+
+.topbar-right {
+    /* float: right;
+    line-height: inherit; */
+}
+
+.topbar-right li {
+    display: inline;
+}
+
+.topbar-right li a {
+    color: #363636;
+    font-size: 14.4px;
+    border-right: 1px solid lightgray;
+}
+
+.topbar-right li a:hover {
+    color: #455eaa;
+}
+
+.topbar-social.tooltips {
+    text-align: right;
+}
+
+
+/* .topbar-right .mdi-account-circle,
+.topbar-right .mdi-logout {
+    position: relative;
+    top: 2px;
+    left: -2px;
+} */
+
+.border-bottom-2{
+    border-bottom: 2px solid #e0e0e0 !important;
+}
+/* @media (min-width: 900px){ */
+
+.topbar-right li a {
+    margin-right: 0.9375rem;
+    padding-right: 0.9375rem;
+}
+
+
+/* } */
+
+.dropdown-menu {
+    min-width: 20rem !important;
+}
+
+#login-form.dropdown-menu .form-group label {
+    height: 50px;
+    padding: 10px 13px;
+    /* padding: 0.375rem 0.75rem; */
+    background: #869ad9;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+#login-form.dropdown-menu .form-group input:focus {
+    background: #869ad991;
+    border: 1px solid #869ad991;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.dropleft .dropdown-toggle::before {
+    display: none;
+}
+
+.user-details-list a {
+    border-bottom: 1px solid lightgray;
+}
+
+.user-details-list .mdi {
+    padding: 10px 15px;
+    background-color: #869ad9;
+    color: #fff;
+    font-size: 20px;
+}
+
+.user-details-list span {
+    padding: 10px 15px;
+    background-color: #e0e5f7;
+    /* color: #fff; */
+    /* font-size: 18px;  */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .mobile-none {
+        display: none;
+    }
+}

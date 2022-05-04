@@ -5,17 +5,21 @@
     </div>
     <topBar />
     <Header />
-    <!-- <div v-scroll-spy>
+    <div ScrollSpy>
       <Slider />
       <CallToAction />
       <Resource />
       <Contact />
-      <ChatBox/>
+      <ChatPopup/>
       <Footer />
-    </div> -->
+    </div>
   </div>
 </template>
+<script>
+export default {
 
+}
+</script>
 <style scoped>
 ::v-deep .modal-content {
   background-color: #000000;

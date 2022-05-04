@@ -1,0 +1,75 @@
+.carousel-cell {
+    max-height: 450px !important;
+  }
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+  color: lightgray;
+  opacity: 1;
+}
+.slick-prev, .slick-next {
+  z-index: 1;
+  background-color: transparent;
+  color: white;
+  border-radius: 50%;
+}
+.slick-next {
+  right: 20px;
+}
+.slick-prev {
+  left: 10px;
+}
+.slick-next:hover,.slick-prev:hover {
+  /* background-color: #ddd; */
+  color: black;
+}
+.slick-next:hover:before,.slick-prev:hover:before  {
+  background-color: transparent;
+  color: black;
+}
+
+.slider-item .slider-bg{
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+}
+
+.slider-item .slider-content{
+  position: relative;
+  top: 50%;
+  /* transform: translateY(-30%); */
+  text-align: center;
+  /* width: 50%; */
+  padding: 0 15%;
+}
+
+.slider-content {
+  color: #fff;
+  font-size: 3.125rem;
+  line-height: 3.75rem;
+  margin-bottom: 0.23438rem;
+}
+.slider-content h1 {
+ font-weight: bolder;
+}
+
+
+@media (min-width: 900px){
+    .slider-item {
+        min-height: 500px;
+    }
+}
+
+@media (min-width: 320px){
+    .slider-item {
+        height: 350px;
+    }
+}
+
+
+@media (max-width: 425px){
+  .slider-item .slider-content{
+    top: 20%;
+  }
+  
+}

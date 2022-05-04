@@ -45,20 +45,22 @@
             class="collapse navbar-collapse w-100 justify-content-center"
             :class="showMenu"
           >
-            <ul id="mySidenav" v-scroll-spy-active="{ class: 'active' }" class="navbar-nav navbar-center m-0">
+            <ul id="mySidenav" ScrollSpy="{ class: 'active' }" class="navbar-nav navbar-center m-0">
               <li class="nav-item text-nowrap">
                 <router-link class="nav-link text-nowrap" to="/">
                   Home
                 </router-link>
               </li>
               <li v-for="submenu in menus" :key="submenu.id" class="nav-item">
-                <router-link tag="a" :to="`/${$i18n.locale}/${submenu.url_end_point}`" class="nav-link text-nowrap">
+                <!-- <router-link tag="a" :to="`/${$i18n.locale}/${submenu.url_end_point}`" class="nav-link text-nowrap">
                   {{ submenu.name }}
-                </router-link>
+                </router-link> -->
+
+                <!-- //Commented Code Aryan -->
               </li>
-              <!-- <li class="nav-item text-nowrap">
+              <li class="nav-item text-nowrap">
                 <a
-                  v-scroll-to="{ el: '#features', offset: -5 }"
+                  scrollTo="{ el: '#features', offset: -5 }"
                   class="nav-link"
                   data-scroll-spy-id="features"
                   href="javascript: void(0);"
@@ -67,7 +69,7 @@
               </li>
               <li class="nav-item text-nowrap">
                 <a
-                  v-scroll-to="{ el: '#services', offset: -5 }"
+                  scrollTo="{ el: '#services', offset: -5 }"
                   class="nav-link"
                   data-scroll-spy-id="services"
                   href="javascript: void(0);"
@@ -76,7 +78,7 @@
               </li>
               <li class="nav-item text-nowrap">
                 <a
-                  v-scroll-to="{ el: '#about', offset: -5 }"
+                  scrollTo="{ el: '#about', offset: -5 }"
                   class="nav-link"
                   data-scroll-spy-id="about"
                   href="javascript: void(0);"
@@ -85,17 +87,17 @@
               </li>
               <li class="nav-item text-nowrap">
                 <a
-                  v-scroll-to="{ el: '#pricing', offset: -5 }"
+                  scrollTo="{ el: '#pricing', offset: -5 }"
                   class="nav-link"
                   data-scroll-spy-id="pricing"
                   href="javascript: void(0);"
                   >Institutes & Departments</a
                 >
               </li>
-               -->
+
               <li class="nav-item text-nowrap">
                 <a
-                  v-scroll-to="{ el: '#contact' }"
+                  scrollTo="{ el: '#contact' }"
                   class="nav-link"
                   data-scroll-spy-id="contact"
                   href="javascript: void(0);"
@@ -141,7 +143,8 @@ export default {
      */
     toggleMenu () {
       // document.getElementById("navbarCollapse").classList.toggle("show");
-      this.showMenu == 'show' ? '' : 'show'
+      // eslint-disable-next-line no-unused-expressions
+      this.showMenu === 'show' ? '' : 'show'
     },
     getSubMenus () {
       axios

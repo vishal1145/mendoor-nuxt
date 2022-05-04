@@ -13,9 +13,9 @@ module.exports = {
     'plugin:nuxt/recommended'
   ],
   plugins: [
+    "@unicorn"
   ],
   // add your custom rules here
   rules: {
-    'vue/no-unused-vars': 'off'
   }
 }

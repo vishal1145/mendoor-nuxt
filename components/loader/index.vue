@@ -22,4 +22,9 @@
 
 <script>
 import './index.css'
+
+export default {
+
+}
+
 </script>
