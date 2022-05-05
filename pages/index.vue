@@ -11,7 +11,7 @@
       <Resource />
       <Contact />
       <ChatPopup/>
-      <Footer />
+      <Footer/>
     </div>
   </div>
 </template>

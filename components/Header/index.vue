@@ -13,45 +13,38 @@
           <!-- </a> -->
         </router-link>
       </div>
-      <nav
-        id="navbar"
-        class="
+      <h1>{{ $t('welcome') }}</h1>
+
+      <nav id="navbar" class="
           navbar navbar-expand-lg navbar-white navbar-custom
           sticky sticky-dark
           shadow-none
-        "
-      >
+        ">
         <div class="container-fluid">
           <!-- LOGO -->
           <!-- <a class="navbar-brand logo text-uppercase" href="/">
           <i class="mdi mdi-alien"></i>Mednoor
         </a> -->
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            @click="toggleMenu()"
-          >
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" @click="toggleMenu()">
             <i class="mdi mdi-menu" />
           </button>
-          <div
-            id="navbarCollapse"
-            style="overflow: visible"
-            class="collapse navbar-collapse w-100 justify-content-center"
-            :class="showMenu"
-          >
+          <div id="navbarCollapse" style="overflow: visible"
+            class="collapse navbar-collapse w-100 justify-content-center" :class="showMenu">
             <ul id="mySidenav" ScrollSpy="{ class: 'active' }" class="navbar-nav navbar-center m-0">
               <li class="nav-item text-nowrap">
-                <router-link class="nav-link text-nowrap" to="/">
+                <!-- <router-link class="nav-link text-nowrap" to="/">
+                </router-link>  Aryan -->
+                <nuxt-link class="nav-link text-nowrap" to="/">
                   Home
-                </router-link>
+                </nuxt-link>
               </li>
               <li v-for="submenu in menus" :key="submenu.id" class="nav-item">
+                <nuxt-link class="nav-link text-nowrap"
+                  :to="localePath(`/${$i18n.locale}/${submenu.url_end_point}`)">
+                  {{ submenu.name }}
+                </nuxt-link>
                 <!-- <router-link tag="a" :to="`/${$i18n.locale}/${submenu.url_end_point}`" class="nav-link text-nowrap">
                   {{ submenu.name }}
                 </router-link> -->
@@ -59,49 +52,25 @@
                 <!-- //Commented Code Aryan -->
               </li>
               <li class="nav-item text-nowrap">
-                <a
-                  scrollTo="{ el: '#features', offset: -5 }"
-                  class="nav-link"
-                  data-scroll-spy-id="features"
-                  href="javascript: void(0);"
-                  >Locations & Directions</a
-                >
+                <a scrollTo="{ el: '#features', offset: -5 }" class="nav-link" data-scroll-spy-id="features"
+                  href="javascript: void(0);">Locations & Directions</a>
               </li>
               <li class="nav-item text-nowrap">
-                <a
-                  scrollTo="{ el: '#services', offset: -5 }"
-                  class="nav-link"
-                  data-scroll-spy-id="services"
-                  href="javascript: void(0);"
-                  >Patients & Visitors</a
-                >
+                <a scrollTo="{ el: '#services', offset: -5 }" class="nav-link" data-scroll-spy-id="services"
+                  href="javascript: void(0);">Patients & Visitors</a>
               </li>
               <li class="nav-item text-nowrap">
-                <a
-                  scrollTo="{ el: '#about', offset: -5 }"
-                  class="nav-link"
-                  data-scroll-spy-id="about"
-                  href="javascript: void(0);"
-                  >Health Library</a
-                >
+                <a scrollTo="{ el: '#about', offset: -5 }" class="nav-link" data-scroll-spy-id="about"
+                  href="javascript: void(0);">Health Library</a>
               </li>
               <li class="nav-item text-nowrap">
-                <a
-                  scrollTo="{ el: '#pricing', offset: -5 }"
-                  class="nav-link"
-                  data-scroll-spy-id="pricing"
-                  href="javascript: void(0);"
-                  >Institutes & Departments</a
-                >
+                <a scrollTo="{ el: '#pricing', offset: -5 }" class="nav-link" data-scroll-spy-id="pricing"
+                  href="javascript: void(0);">Institutes & Departments</a>
               </li>
 
               <li class="nav-item text-nowrap">
-                <a
-                  scrollTo="{ el: '#contact' }"
-                  class="nav-link"
-                  data-scroll-spy-id="contact"
-                  href="javascript: void(0);"
-                >Contact</a>
+                <a scrollTo="{ el: '#contact' }" class="nav-link" data-scroll-spy-id="contact"
+                  href="javascript: void(0);">Contact</a>
               </li>
             </ul>
             <!-- <div class="nav-button ml-auto">
@@ -134,19 +103,19 @@ export default {
     showMenu: '',
     menus: []
   }),
-  mounted () {
+  mounted() {
     this.getSubMenus()
   },
   methods: {
     /**
      * Toggle menu
      */
-    toggleMenu () {
+    toggleMenu() {
       // document.getElementById("navbarCollapse").classList.toggle("show");
       // eslint-disable-next-line no-unused-expressions
       this.showMenu === 'show' ? '' : 'show'
     },
-    getSubMenus () {
+    getSubMenus() {
       axios
         .get(`${process.env.VUE_APP_API_URL}/submenu/get-active-submenu`)
         .then((response) => {

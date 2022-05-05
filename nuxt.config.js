@@ -21,7 +21,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering psage: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/scroll-to.js","~/plugins/scroll-spy.js"],
+  plugins: ["~/plugins/scroll-to.js", "~/plugins/scroll-spy.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -38,24 +38,27 @@ export default {
     "bootstrap-vue/nuxt",
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "@nuxtjs/i18n",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "/",
+    baseURL: "/"
+
   },
+
   i18n: {
-    locales: [
-      {
-        code: 'en',
-        name: 'English'
+    locales: ["en", "es"],
+    defaultLocale: "en",
+    vueI18n: {
+      fallbackLocale: "en",
+      messages: {
+        en: {
+          welcome: "Welcome",
+        },
       },
-      {
-        code: 'es',
-        name: 'Español'
-      }
-    ]
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

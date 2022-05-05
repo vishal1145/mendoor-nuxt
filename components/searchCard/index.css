@@ -1,0 +1,106 @@
+#search-box .padding {
+    padding: 1rem 3rem !important
+}
+
+#search-box .user-card-full {
+    overflow: hidden
+}
+
+#search-box .card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px
+}
+
+#search-box .bg-c-lite-green {
+    /* background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f)); */
+    background: linear-gradient(to right, #455eaa, #7a8cc2)
+}
+
+#search-box .user-profile {
+    padding: 20px 0
+}
+
+#search-box .card-block {
+    padding: 1.25rem
+}
+
+#search-box .m-b-25 {
+    margin-bottom: 25px
+}
+
+#search-box .img-radius {
+    border-radius: 5px
+}
+
+h6 {
+    font-size: 14px
+}
+
+#search-box .card .card-block p {
+    line-height: 25px
+}
+
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px
+    }
+}
+
+#search-box .card-block {
+    padding: 1.25rem
+}
+
+#search-box .b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+#search-box .m-b-20 {
+    margin-bottom: 20px
+}
+
+#search-box .p-b-5 {
+    padding-bottom: 5px !important
+}
+
+#search-box .card .card-block p {
+    line-height: 25px
+}
+
+#search-box .m-b-10 {
+    margin-bottom: 10px
+}
+
+#search-box .text-muted {
+    color: #919aa3 !important
+}
+
+#search-box .b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+#search-box .f-w-600 {
+    font-weight: 600
+}
+
+#search-box .m-b-20 {
+    margin-bottom: 20px
+}
+
+#search-box .m-t-40 {
+    margin-top: 20px
+}
+
+#search-box .p-b-5 {
+    padding-bottom: 5px !important
+}
+
+#search-box .m-b-10 {
+    margin-bottom: 10px
+}
+
+#search-box .m-t-40 {
+    margin-top: 20px
+}
