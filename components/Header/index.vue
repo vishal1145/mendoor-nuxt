@@ -42,7 +42,7 @@
               </li>
               <li v-for="submenu in menus" :key="submenu.id" class="nav-item">
                 <nuxt-link class="nav-link text-nowrap"
-                  :to="localePath(`/${$i18n.locale}/dynamic-page?slug=/${submenu.url_end_point.trim()}`)">
+                  :to="localePath(`/${$i18n.locale}/dynamic-page?slug=${submenu.url_end_point}`)">
                   {{ submenu.name }}
 
                 </nuxt-link>
@@ -50,7 +50,6 @@
                   {{ submenu.name }}
                 </router-link> -->
 
-                <!-- //Commented Code Aryan -->
               </li>
               <li class="nav-item text-nowrap">
                 <a scrollTo="{ el: '#features', offset: -5 }" class="nav-link" data-scroll-spy-id="features"

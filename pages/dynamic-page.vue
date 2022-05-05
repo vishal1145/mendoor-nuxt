@@ -16,6 +16,7 @@ export default {
     },
     methods:{
         getPageDetail(){
+          debugger
         if(this.$route.query.slug){
         axios
             .get(`${process.env.VUE_APP_API_URL}/page/slug/${this.$route.query.slug}`)

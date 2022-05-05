@@ -84,14 +84,19 @@
                 </div>
               </div>
               <div class="row">
+
                 <div class="col-lg-12 text-right">
-                  <input
+                  <btn
+                   id="submit"
+                   name="send"
+                  class="btn btn-primary">Send Message</btn>
+                  <!-- <input
                     type="submit"
                     id="submit"
                     name="send"
                     class="submitBnt btn btn-custom"
                     value="Send Message"
-                  />
+                  /> -->
                   <div id="simple-msg"></div>
                 </div>
               </div>
@@ -129,3 +134,16 @@ export default {
   }
 }
 </script>
+<style>
+.btn-primary {
+    color: #fff;
+    background-color: #455eaa;
+    border-color: #455eaa;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #455eaa;
+    border-color: #455eaa;
+}
+</style>
+

@@ -26,9 +26,9 @@
                   <a href>Disscusion</a>
                 </li> -->
                 <li v-for="footermenu in footer_support_menu" :key="footermenu.id">
-                  <!-- <router-link :to="`/${$i18n.locale}/${footermenu.url_end_point}`">
+                  <nuxt-link :to="`/${$i18n.locale}/dynamic-page?slug=${footermenu.url_end_point}`">
                     {{footermenu.name}}
-                  </router-link> -->
+                  </nuxt-link>
                   <!-- Aryan -->
                 </li>
               </ul>
@@ -39,9 +39,9 @@
             <div class="text-muted margin-t-20">
               <ul class="list-unstyled footer-list">
                 <li v-for="footermenu in footer_quick_menu" :key="footermenu.id">
-                  <!-- <router-link :to="`/${$i18n.locale}/${footermenu.url_end_point}`">
+                  <nuxt-link :to="`/${$i18n.locale}/dynamic-page?slug=${footermenu.url_end_point}`">
                     {{footermenu.name}}
-                  </router-link> -->
+                  </nuxt-link>
                   <!-- Aryan -->
                 </li>
               </ul>
@@ -52,17 +52,17 @@
             <div class="text-muted margin-t-20">
               <ul class="list-unstyled footer-list">
                 <li>
-                  <!-- <router-link
+                  <nuxt-link
                     tag="a"
                     :to="`/${$i18n.locale}/terms-and-conditions`"
                   >
                     <span>{{ $t("terms_cond") }}</span>
-                  </router-link> -->
+                  </nuxt-link>
                 </li>
                 <li>
-                  <!-- <router-link tag="a" :to="`/${$i18n.locale}/privacy-policy`">
+                  <nuxt-link tag="a" :to="`/${$i18n.locale}/privacy-policy`">
                      <span>{{ $t("privacy_p") }}</span>
-                  </router-link> -->
+                  </nuxt-link>
                   <!-- Aryan -->
                 </li>
               </ul>

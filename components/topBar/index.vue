@@ -1,9 +1,6 @@
 <template>
   <div class="topbar-wrap topbar-style-1 pt-2">
     <div class="ruby-container">
-      <pre>
-
-      </pre>
       <div class="topbar-inner container-inner clearfix">
         <div class="topbar-right">
           <div class="topbar-social tooltips">
@@ -11,7 +8,7 @@
               <li v-for="mainmenu in menus" :key="mainmenu.id">
                 <nuxt-link
                   tag="a"
-                  :to="localePath(`/${$i18n.locale}/${mainmenu.url_end_point}`)"
+                  :to="localePath(`/${$i18n.locale}/dynamic-page?slug=${mainmenu.url_end_point}`)"
                   class="nav--utility__link mobile-none"
                 >
                 {{mainmenu.name}}
@@ -177,10 +174,8 @@
                   <i class="mdi mdi-logout" style="font-size: 20px"></i>
                 </a>
               </li> -->
-              <li class="dropdown">
-                <!-- //Commented Code Aryan -->
-
-              <!-- <a class="button--small dropdown-toggle" type="button" data-toggle="dropdown">{{$i18n.locale.toUpperCase()}}</a> -->
+                <li class="dropdown">
+              <a class="button--small dropdown-toggle" type="button" data-toggle="dropdown">{{$i18n.locale.toUpperCase()}}</a>
               <ul class="dropdown-menu" style="border:none !important">
                 <li  @click="toggleSwitcher('en')">EN</li>
                 <br>
