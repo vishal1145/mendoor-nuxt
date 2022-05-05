@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ["~/assets/css/style"],
 
   // Plugins to run before rendering psage: https://go.nuxtjs.dev/config-plugins
   plugins: ["~/plugins/scroll-to.js", "~/plugins/scroll-spy.js"],
@@ -44,21 +44,23 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "/"
-
+    baseURL: "/",
+  },
+  env: {
+    VUE_APP_API_URL: process.env.VUE_APP_API_URL,
   },
 
   i18n: {
-    locales: ["en", "es"],
-    defaultLocale: "en",
+    strategy: 'prefix',
+    locales: [
+      { name: 'English', code: 'en', iso: 'en-US', file: 'en.js' },
+      { name: 'Español', code: 'es', iso: 'es-MX', file: 'es.js' },
+    ],
+    defaultLocale: 'en',
     vueI18n: {
-      fallbackLocale: "en",
-      messages: {
-        en: {
-          welcome: "Welcome",
-        },
-      },
+      fallbackLocale: 'en',
     },
+    langDir: 'lang/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

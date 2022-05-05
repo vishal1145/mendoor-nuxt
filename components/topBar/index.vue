@@ -1,19 +1,21 @@
 <template>
   <div class="topbar-wrap topbar-style-1 pt-2">
     <div class="ruby-container">
+      <pre>
+
+      </pre>
       <div class="topbar-inner container-inner clearfix">
         <div class="topbar-right">
           <div class="topbar-social tooltips">
             <ul class="mb-0">
               <li v-for="mainmenu in menus" :key="mainmenu.id">
-                <!-- <router-link
+                <nuxt-link
                   tag="a"
-                  :to="`/${$i18n.locale}/${mainmenu.url_end_point}`"
+                  :to="localePath(`/${$i18n.locale}/${mainmenu.url_end_point}`)"
                   class="nav--utility__link mobile-none"
                 >
                 {{mainmenu.name}}
-                </router-link> -->
-                <!-- //Commented Code Aryan -->
+                </nuxt-link>
 
               </li>
               <li v-if="this.authorization">
@@ -48,33 +50,29 @@
                     </span>
                   </a>
                   <div class="dropdown-menu p-0 rounded-0 user-details-list">
-                    <!-- <router-link
+                    <nuxt-link
                       tag="a"
-                      :to="`/${$i18n.locale}/profile/edit`"
+                      :to="localePath(`/${$i18n.locale}/profile/edit`)"
                       class="d-flex m-0 p-0 align-items-center"
                     >
                       <i class="mdi mdi-account-circle"></i>
                       <span>{{ $t("my_profile") }}</span>
-                    </router-link> -->
-                <!-- //Commented Code Aryan -->
+                    </nuxt-link>
 
-
-                    <!-- <router-link
+                    <nuxt-link
                       v-if="this.user.roleTxt == 'Professional'"
                       tag="a"
-                      :to="`/${$i18n.locale}/users-list`"
+                      :to="localePath(`/${$i18n.locale}/users-list`)"
                       class="d-flex p-0 m-0 align-items-center"
                     >
                       <i class="mdi mdi-account-group"></i>
                       <span>{{ $t("list_usrs") }}</span>
-                    </router-link> -->
-                <!-- //Commented Code Aryan -->
+                    </nuxt-link>
 
-
-                    <!-- <router-link
+                    <nuxt-link
                       v-if="this.user.roleTxt == 'Professional'"
                       tag="a"
-                      :to="`/${$i18n.locale}/my-patients`"
+                      :to="localePath(`/${$i18n.locale}/my-patients`)"
                       class="d-flex p-0 m-0 align-items-center"
                     >
                       <i class="mdi">
@@ -86,50 +84,46 @@
                         </svg>
                       </i>
                       <span>{{ $t("my_patients") }}</span>
-                    </router-link> -->
-                <!-- //Commented Code Aryan -->
+                    </nuxt-link>
 
 
-                    <!-- <router-link
+                    <nuxt-link
                       tag="a"
-                      :to="`/${$i18n.locale}/search`"
+                      :to="localePath(`/${$i18n.locale}/search`)"
                       class="d-flex p-0 m-0 align-items-center"
                     >
                       <i class="mdi mdi-contacts"></i>
                       <span>My Appointments</span>
-                    </router-link> -->
+                    </nuxt-link>
 
-                <!-- //Commented Code Aryan -->
 
-                    <!-- <router-link
+                    <nuxt-link
                       v-if="this.user.roleTxt == 'Professional'"
                       tag="a"
-                      :to="`/${$i18n.locale}/my-chats`"
+                      :to="localePath(`/${$i18n.locale}/my-chats`)"
                       class="d-flex p-0 m-0 align-items-center"
                     >
                       <i class="mdi mdi-note"></i>
                       <span>{{ $t("prev_c_pdf") }}</span>
-                    </router-link> -->
-
-                <!-- //Commented Code Aryan -->
+                    </nuxt-link>
 
 
-                    <!-- <router-link
+
+                    <nuxt-link
                       tag="a"
-                      :to="`/${$i18n.locale}/messenger`"
+                      :to="localePath(`/${$i18n.locale}/messenger`)"
                       class="d-flex p-0 m-0 align-items-center"
                     >
                       <i class="mdi mdi-forum"></i>
                       <span> Messenger</span>
-                    </router-link> -->
-
-                <!-- //Commented Code Aryan -->
+                    </nuxt-link>
 
 
-                    <!-- <router-link
+
+                    <nuxt-link
                       v-if="this.user.roleTxt == 'Professional'"
                       tag="a"
-                      :to="`/${$i18n.locale}/chat-requests`"
+                      :to="localePath(`/${$i18n.locale}/chat-requests`)"
                       class="d-flex p-0 m-0 align-items-center"
                     >
                       <i class="mdi">
@@ -141,9 +135,8 @@
                         </svg>
                       </i>
                       <span> Chat Queue</span>
-                    </router-link> -->
+                    </nuxt-link>
 
-                <!-- //Commented Code Aryan -->
 
                     <a
                       href="javescript:void(0)"
@@ -151,7 +144,7 @@
                       @click="logout()"
                     >
                       <i class="mdi mdi-logout"></i>
-                      <!-- <span>{{ $t("sign_out") }}</span> -->
+                      <span>{{ $t("sign_out") }}</span>
                     </a>
                   </div>
                 </div>
@@ -268,24 +261,24 @@
                       </button>
                     </div>
                     <div class="mt-1 mb-1 pl-2 text-center border-bottom-2">
-                      <!-- <router-link
+                      <nuxt-link
                         tag="a"
-                        :to="`/${$i18n.locale}/Signup`"
+                        :to="localePath(`/${$i18n.locale}/Signup`)"
                         class="text-dark border-0 p-0 m-0 "
                       >
                         {{ $t("dont_h_acc") }} {{ $t("sign_up") }}
-                      </router-link> -->
+                      </nuxt-link>
                 <!-- //Commented Code Aryan -->
 
                     </div>
                     <div class="mt-2 mb-2 text-center">
-                      <!-- <router-link
+                      <nuxt-link
                         tag="a"
-                        :to="`/${$i18n.locale}/password_forgot`"
+                        :to="localePath(`/${$i18n.locale}/password_forgot`)"
                         class="text-dark border-0 p-0 m-0"
                       >
                         <i class="mdi mdi-lock"></i> {{ $t("forgot_pwd") }}
-                      </router-link> -->
+                      </nuxt-link>
                 <!-- //Commented Code Aryan -->
 
                     </div>
@@ -335,6 +328,7 @@ export default {
       axios
         .get(`${process.env.VUE_APP_API_URL}/submenu/get-active-mainmenu`)
         .then((response) => {
+          console.log(response)
           if (response && response.data) {
             this.menus = response.data;
           } else {

@@ -16,9 +16,9 @@ export default {
     },
     methods:{
         getPageDetail(){
-        if(this.$route.params.slug){
+        if(this.$route.query.slug){
         axios
-            .get(`${process.env.VUE_APP_API_URL}/page/slug/${this.$route.params.slug}`)
+            .get(`${process.env.VUE_APP_API_URL}/page/slug/${this.$route.query.slug}`)
             .then((response) => {
             if (response && response.data && response.data.result.data) {
                 this.page = response.data.result.data.page_content;

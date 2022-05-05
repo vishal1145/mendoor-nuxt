@@ -13,7 +13,6 @@
           <!-- </a> -->
         </router-link>
       </div>
-      <h1>{{ $t('welcome') }}</h1>
 
       <nav id="navbar" class="
           navbar navbar-expand-lg navbar-white navbar-custom
@@ -34,16 +33,18 @@
             class="collapse navbar-collapse w-100 justify-content-center" :class="showMenu">
             <ul id="mySidenav" ScrollSpy="{ class: 'active' }" class="navbar-nav navbar-center m-0">
               <li class="nav-item text-nowrap">
-                <!-- <router-link class="nav-link text-nowrap" to="/">
-                </router-link>  Aryan -->
-                <nuxt-link class="nav-link text-nowrap" to="/">
+                <router-link class="nav-link text-nowrap" :to="localePath('/')">
                   Home
-                </nuxt-link>
+                </router-link>
+                <!-- <nuxt-link class="nav-link text-nowrap" to="/">
+                  Home
+                </nuxt-link> -->
               </li>
               <li v-for="submenu in menus" :key="submenu.id" class="nav-item">
                 <nuxt-link class="nav-link text-nowrap"
-                  :to="localePath(`/${$i18n.locale}/${submenu.url_end_point}`)">
+                  :to="localePath(`/${$i18n.locale}/dynamic-page?slug=/${submenu.url_end_point.trim()}`)">
                   {{ submenu.name }}
+
                 </nuxt-link>
                 <!-- <router-link tag="a" :to="`/${$i18n.locale}/${submenu.url_end_point}`" class="nav-link text-nowrap">
                   {{ submenu.name }}
